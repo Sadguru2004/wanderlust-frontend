@@ -1,0 +1,32 @@
+/* ⭐ Star Rating */
+.star-rating {
+  display: flex;
+  justify-content: flex-start; /* left side */
+  gap: 5px;
+}
+
+.star-rating input {
+  display: none;
+}
+
+.star-rating label {
+  font-size: 32px; /* 🔥 bigger stars */
+  color: #ddd;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* hover effect */
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  color: gold;
+}
+
+/* selected stars */
+.star-rating input:checked ~ label {
+  color: gold;
+}
+
+.star-rating input[type="radio"] {
+  display: none; /* hide dots */
+}
