@@ -44,7 +44,7 @@ function CreateListing({ currentUser }) {
     const token = localStorage.getItem("token");
 
     await axios.post(
-      "http://localhost:8080/listings",
+      "https://wanderlust-backend-1-7s0n.onrender.com/listings",
       formData,
       {
         headers: {

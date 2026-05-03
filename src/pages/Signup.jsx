@@ -19,7 +19,7 @@ function Signup({ setCurrentUser }) {
   const handleSubmit = async (e) => {
   e.preventDefault();
   try {
-    await axios.post("http://localhost:8080/auth/signup", formData);
+    await axios.post("https://wanderlust-backend-1-7s0n.onrender.com/auth/signup", formData);
     
     alert("Signup successful! Please login.");
     navigate("/login"); // go to login page

@@ -16,10 +16,10 @@ function Home() {
       const params = new URLSearchParams(location.search);
       const search = params.get("search");
 
-      let url = "http://localhost:8080/listings";
+      let url = "https://wanderlust-backend-1-7s0n.onrender.com/listings";
 
       if (search) {
-        url = `http://localhost:8080/listings/search?keyword=${search}`;
+        url = `https://wanderlust-backend-1-7s0n.onrender.com/listings/search?keyword=${search}`;
       }
 
       const res = await axios.get(url);

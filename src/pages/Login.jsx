@@ -20,7 +20,7 @@ function Login({ setCurrentUser }) {
 
     try {
       const res = await axios.post(
-        "http://localhost:8080/auth/login",
+        "https://wanderlust-backend-1-7s0n.onrender.com/auth/login",
         formData
       );
 

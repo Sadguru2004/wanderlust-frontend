@@ -24,7 +24,7 @@ function EditListing() {
 
   const fetchListing = async () => {
     try {
-      const res = await axios.get(`http://localhost:8080/listings/${id}`);
+      const res = await axios.get(`https://wanderlust-backend-1-7s0n.onrender.com/listings/${id}`);
       setFormData(res.data);
     } catch (err) {
       console.error(err);
@@ -53,7 +53,7 @@ function EditListing() {
       const token = localStorage.getItem("token");
 
       await axios.put(
-        `http://localhost:8080/listings/${id}`,
+        `https://wanderlust-backend-1-7s0n.onrender.com/listings/${id}`,
         formData,
         {
           headers: {

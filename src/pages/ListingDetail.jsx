@@ -19,7 +19,7 @@ function ListingDetail({ currentUser }) {
 
   const fetchListing = async () => {
     try {
-      const res = await axios.get(`http://localhost:8080/listings/${id}`);
+      const res = await axios.get(`https://wanderlust-backend-1-7s0n.onrender.com/listings/${id}`);
       setListing(res.data);
     } catch (err) {
       console.error(err);
@@ -33,7 +33,7 @@ function ListingDetail({ currentUser }) {
       const token = localStorage.getItem("token");
 
       await axios.post(
-        `http://localhost:8080/reviews/${id}`,
+        `https://wanderlust-backend-1-7s0n.onrender.com/reviews/${id}`,
         reviewData,
         {
           headers: {
@@ -55,7 +55,7 @@ function ListingDetail({ currentUser }) {
       const token = localStorage.getItem("token");
 
       await axios.delete(
-        `http://localhost:8080/reviews/${reviewId}`,
+        `https://wanderlust-backend-1-7s0n.onrender.com/reviews/${reviewId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`
@@ -76,7 +76,7 @@ function ListingDetail({ currentUser }) {
         const token = localStorage.getItem("token");
 
         await axios.delete(
-          `http://localhost:8080/listings/${listing.id}`,
+          `https://wanderlust-backend-1-7s0n.onrender.com/listings/${listing.id}`,
           {
             headers: {
               Authorization: `Bearer ${token}`
